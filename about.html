@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>О проекте — pipix.lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .about-hero {
+      margin-top: 10px;
+      margin-bottom: 18px;
+    }
+    .about-hero h1 {
+      font-size: 30px;
+      margin: 0 0 8px;
+    }
+    .about-label {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(167,139,250,0.14);
+      color: #4C1D95;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 6px;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(260px, 1.2fr);
+      gap: 22px;
+      margin-top: 8px;
+    }
+    .about-card,
+    .about-note,
+    .about-feedback {
+      background: var(--card);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-soft);
+      padding: 18px 18px 16px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .about-card h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: var(--accent-dark);
+    }
+    .about-note h3,
+    .about-feedback h3 {
+      margin: 0 0 6px;
+      font-size: 15px;
+      color: var(--accent-dark);
+    }
+    .about-list {
+      padding-left: 18px;
+      margin: 6px 0 0;
+    }
+    .about-list li {
+      margin-bottom: 4px;
+    }
+    .about-cta {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+    .about-cta span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .about-feedback-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .about-feedback a {
+      font-size: 13px;
+      text-decoration: none;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(167,139,250,0.3);
+      color: var(--accent-dark);
+      background: rgba(247,247,251,0.9);
+      transition: all .16s ease;
+    }
+    .about-feedback a:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: transparent;
+    }
+    @media (max-width: 800px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+  <header class="site-header">
+    <div class="logo">pipix.lab</div>
+    <nav class="nav">
+      <a href="index.html">Тесты</a>
+      <a href="flower.html">Цветочек</a>
+      <a href="elf.html">Эльф</a>
+      <a href="about.html" class="is-active">О проекте</a>
+    </nav>
+  </header>
+
+  <section class="about-hero">
+    <div class="about-label">о чём pipix.lab</div>
+    <h1>о проекте</h1>
+    <p class="section-text" style="max-width:620px;">
+      pipix.lab — домашняя лаборатория тестов, где можно посмотреть на себя мягко и без рекламы,
+      которая рекомендует тебе всякий бред, пока ты пытаешься разобраться в своём характере.
+    </p>
+  </section>
+
+  <section class="about-grid">
+    <article class="about-card">
+      <h2>Что здесь происходит</h2>
+      <p>
+        Тесты собираются вручную: продумываются вопросы, логика баллов и формулировки результатов.
+       А ещё я пишу книгу и стану мэром Москвы.
+      </p>
+      <ul class="about-list">
+        <li>без удобоваримых диагнозов — только образы и сценарии;</li>
+        <li>без навязанного «норм/ненорм» — разные способы быть собой;</li>
+        <li>без встроенной рекламы между вопросами.</li>
+      </ul>
+    </article>
+
+    <aside class="about-note">
+      <h3>Немного обо мне</h3>
+      <p>
+        Я — pipix. Пишу тексты, наблюдаю за людьми и много лет делаю тесты. Кто-то помнит сайь aeterna? 😢
+      </p>
+      <p>
+        В какой-то момент стало слишком: алгоритмы, баннеры, чужой тон, в который врезаются мои вопросы.
+        Хотелось отдельного тихого места, где тесты остаются бережными, а не становятся упаковкой для чужих продаж.
+      </p>
+      <p style="font-size:12px; color:#9CA3AF;">
+        pipix.lab — это такое место. Никаких скрытых интеграций, максимум — честная просьба написать фидбек.
+      </p>
+    </aside>
+  </section>
+
+  <section style="margin-top:22px;">
+    <article class="about-card">
+      <h2>Как читать результаты</h2>
+      <p>
+        Результат — это подсказка и метафора, а не ярлык. Что откликается — забирай,
+        что раздражает — можно рассматривать как триггер или просто выбросить.
+      </p>
+      <p>
+        Эти тексты не заменяют терапию и не претендуют на официальную диагностику.
+        Они помогают лучше увидеть свои привычные ходы и поговорить с собой (и друг с другом) понятным языком.
+      </p>
+    </article>
+  </section>
+
+  <section class="about-feedback" style="margin-top:18px;">
+    <h3>Обратная связь</h3>
+    <p>
+      Если тест помог, задел или у тебя есть идея нового — можно написать пару строк.
+      Это помогает делать pipix.lab чище, точнее и оставаться без навязчивой рекламы.
+    </p>
+    <div class="about-feedback-links">
+      <a href="https://t.me/versvh" target="_blank">Написать в Telegram</a>
+    </div>
+  </section>
+
+  <section class="about-cta">
+    <a href="index.html" class="btn">К тестам</a>
+    <span>Можно начать с «Какой ты цветочек?» или «Какой ты эльф?».</span>
+  </section>
+
+  <footer class="site-footer">
+    © pipix.lab — авторские тесты. Тексты и логика — pipix.
+  </footer>
+</div>
+
+</body>
+</html>
