@@ -1,0 +1,274 @@
+/* ===== БАЗА ===== */
+:root {
+  --bg: #F7F7FB;
+  --card: #FFFFFF;
+  --text: #18181B;
+  --muted: #6B7280;
+  --accent: #A78BFA;
+  --accent-dark: #4C1D95;
+  --radius-xl: 22px;
+  --shadow-soft: 0 10px 30px rgba(15,23,42,0.06);
+  --shadow-hover: 0 18px 40px rgba(15,23,42,0.12);
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, -system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ===== ОБЩАЯ ОБВЁРТКА ===== */
+
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+/* ===== ХЕДЕР ===== */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 4px 0 14px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--accent-dark);
+  letter-spacing: 0.02em;
+}
+
+.nav a {
+  margin-left: 18px;
+  font-size: 14px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.nav a:hover,
+.nav a.is-active {
+  color: var(--accent-dark);
+}
+
+/* ===== HERO ===== */
+
+.hero {
+  text-align: center;
+  padding: 28px 14px 24px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin: 0 0 8px;
+}
+
+.hero p {
+  margin: 0 0 20px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+/* ===== КНОПКИ ===== */
+
+.btn,
+button.btn {
+  display: inline-block;
+  padding: 9px 22px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: all .18s ease;
+}
+
+.btn:hover,
+button.btn:hover {
+  background: var(--accent-dark);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  padding: 9px 22px;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--accent-dark);
+  font-weight: 500;
+  font-size: 13px;
+  margin-left: 8px;
+  box-shadow: none;
+}
+
+.btn-ghost:hover {
+  background: rgba(167,139,250,0.09);
+  box-shadow: none;
+  transform: none;
+}
+
+/* ===== СЕКЦИИ НА ГЛАВНОЙ ===== */
+
+.section-title {
+  font-size: 22px;
+  margin: 24px 0 6px;
+}
+
+.section-text {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* сетка карточек тестов */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius-xl);
+  padding: 18px 18px 14px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all .18s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+}
+
+.card p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.card .tag {
+  display: inline-block;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(167,139,250,0.14);
+  color: var(--accent-dark);
+  margin-bottom: 4px;
+}
+
+/* блок "О проекте" */
+.about-box {
+  margin-top: 24px;
+  padding: 18px 18px 16px;
+  border-radius: var(--radius-xl);
+  background: var(--card);
+  box-shadow: var(--shadow-soft);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.about-box strong {
+  color: var(--accent-dark);
+}
+
+/* ===== СТРАНИЦА ТЕСТА ===== */
+
+.test-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--card);
+  border-radius: var(--radius-xl);
+  padding: 22px 20px 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.test-title {
+  font-size: 24px;
+  margin: 0 0 4px;
+}
+
+.test-desc {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 16px;
+}
+
+.question {
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.question h3 {
+  font-size: 15px;
+  margin: 0 0 6px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 16px;
+  padding: 14px 12px;
+  border-radius: 18px;
+  background: #F5F3FF;
+  font-size: 14px;
+  display: none;
+  color: var(--accent-dark);
+}
+
+.result strong {
+  font-size: 15px;
+}
+
+/* ===== ФУТЕР ===== */
+
+.site-footer {
+  text-align: center;
+  padding: 18px 0 6px;
+  font-size: 11px;
+  color: #9CA3AF;
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 640px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav a {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+  .hero h1 {
+    font-size: 26px;
+  }
+}
