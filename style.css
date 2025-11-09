@@ -1,4 +1,4 @@
-/* ===== БАЗ ===== */
+/* ===== БАЗА ===== */
 :root {
   --bg: #F7F7FB;
   --card: #FFFFFF;
@@ -9,7 +9,7 @@
   --radius-xl: 22px;
   --shadow-soft: 0 10px 30px rgba(15,23,42,0.06);
   --shadow-hover: 0 18px 40px rgba(15,23,42,0.12);
-  --font-main: system-ui, -apple-system, BlinkMacSystemFont, -system-ui, sans-serif;
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 *,
@@ -65,36 +65,14 @@ body {
 /* ===== HERO ===== */
 
 .hero {
-  text-align: center;
   padding: 28px 14px 24px;
 }
-
-.hero h1 {
-  font-size: 32px;
-  margin: 0 0 8px;
-}
-
-.hero p {
-  margin: 0 0 20px;
-  font-size: 15px;
-  color: var(--muted);
-}
-/* HERO layout */
 
 .hero-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(260px, 1fr);
   gap: 26px;
   align-items: center;
-}
-
-.hero-left h1 {
-  font-size: 32px;
-  margin: 8px 0 8px;
-}
-
-.hero-left p {
-  font-size: 15px;
 }
 
 .hero-label {
@@ -107,6 +85,16 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
+}
+
+.hero-left h1 {
+  font-size: 32px;
+  margin: 8px 0 8px;
+}
+
+.hero-left p {
+  font-size: 15px;
+  color: var(--muted);
 }
 
 .hero-actions {
@@ -148,17 +136,6 @@ body {
   border-radius: 24px;
 }
 
-/* адаптив для hero layout */
-@media (max-width: 800px) {
-  .hero-layout {
-    grid-template-columns: 1fr;
-  }
-  .hero-right {
-    order: -1; /* картинка выше текста или можно убрать */
-  }
-}
-
-
 /* ===== КНОПКИ ===== */
 
 .btn,
@@ -197,7 +174,6 @@ button.btn:hover {
 .btn-ghost:hover {
   background: rgba(167,139,250,0.09);
   box-shadow: none;
-  transform: none;
 }
 
 /* ===== СЕКЦИИ НА ГЛАВНОЙ ===== */
@@ -277,7 +253,7 @@ button.btn:hover {
 
 .test-wrapper {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto 32px;
   background: var(--card);
   border-radius: var(--radius-xl);
   padding: 22px 20px 24px;
@@ -313,6 +289,7 @@ label {
   cursor: pointer;
 }
 
+/* блок результата */
 .result {
   margin-top: 16px;
   padding: 14px 12px;
@@ -338,6 +315,15 @@ label {
 
 /* ===== АДАПТИВ ===== */
 
+@media (max-width: 800px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+  .hero-right {
+    margin-top: 14px;
+  }
+}
+
 @media (max-width: 640px) {
   .site-header {
     flex-direction: column;
@@ -347,6 +333,7 @@ label {
     margin-left: 0;
     margin-right: 12px;
   }
+  .hero-left h1,
   .hero h1 {
     font-size: 26px;
   }
