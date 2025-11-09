@@ -432,3 +432,31 @@ label {
     margin-bottom: 6px;
   }
 }
+.result-score {
+  font-size: 13px;
+  color: #6B7280;
+  margin-bottom: 4px;
+}
+
+.result-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4C1D95;
+  margin-bottom: 6px;
+}
+
+.result-body p {
+  margin: 0 0 8px;
+  line-height: 1.55;
+  color: #4B5563;
+}
+
+.result-body p:last-child {
+  margin-bottom: 0;
+}
+
+.result-label {
+  font-weight: 600;
+  color: #4C1D95;
+}
+
