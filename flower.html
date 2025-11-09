@@ -20,7 +20,13 @@
       justify-content: center;
       color: #9CA3AF;
       font-size: 12px;
+      overflow: hidden;
     }
+    .test-image-slot .test-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* картинка заполняет блок, не растягиваясь странно */
+    display: block;
   </style>
 </head>
 <body>
@@ -37,9 +43,9 @@
 
 <div class="test-wrapper">
   <!-- Слот для картинки логотипа / иллюстрации -->
-  <div class="test-image-slot">
-    сюда можно вставить картинку для теста
-  </div>
+<div class="test-image-slot">
+  <img src="flower-cover.png" alt="Какой ты цветочек — обложка теста" class="test-image">
+</div>
 
   <h1 class="test-title">Какой ты цветочек?</h1>
   <p class="test-desc">
